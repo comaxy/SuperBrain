@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FC5BC061D22BE04007D10A3 /* FriendListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5BC051D22BE04007D10A3 /* FriendListScene.swift */; };
 		399879CB1D226C57000331C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399879CA1D226C57000331C6 /* AppDelegate.swift */; };
 		399879CD1D226C57000331C6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 399879CC1D226C57000331C6 /* GameScene.sks */; };
 		399879CF1D226C57000331C6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399879CE1D226C57000331C6 /* GameScene.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FC5BC051D22BE04007D10A3 /* FriendListScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListScene.swift; sourceTree = "<group>"; };
 		399879C71D226C57000331C6 /* SuperBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		399879CA1D226C57000331C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		399879CC1D226C57000331C6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				399879D51D226C57000331C6 /* Assets.xcassets */,
 				399879D71D226C57000331C6 /* LaunchScreen.storyboard */,
 				399879DA1D226C57000331C6 /* Info.plist */,
+				0FC5BC051D22BE04007D10A3 /* FriendListScene.swift */,
 			);
 			path = SuperBrain;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				399879D11D226C57000331C6 /* GameViewController.swift in Sources */,
 				39987A181D227D0B000331C6 /* ysocket.swift in Sources */,
 				399879CB1D226C57000331C6 /* AppDelegate.swift in Sources */,
+				0FC5BC061D22BE04007D10A3 /* FriendListScene.swift in Sources */,
 				39987A191D227D0B000331C6 /* ytcpsocket.c in Sources */,
 				39987A1C1D227D0B000331C6 /* yudpsocket.swift in Sources */,
 				39987A1B1D227D0B000331C6 /* yudpsocket.c in Sources */,
@@ -322,6 +326,7 @@
 				399879DF1D226C57000331C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
