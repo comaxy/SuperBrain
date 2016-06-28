@@ -14,6 +14,11 @@
 		399879D41D226C57000331C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 399879D21D226C57000331C6 /* Main.storyboard */; };
 		399879D61D226C57000331C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 399879D51D226C57000331C6 /* Assets.xcassets */; };
 		399879D91D226C57000331C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 399879D71D226C57000331C6 /* LaunchScreen.storyboard */; };
+		39987A181D227D0B000331C6 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39987A131D227D0B000331C6 /* ysocket.swift */; };
+		39987A191D227D0B000331C6 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 39987A141D227D0B000331C6 /* ytcpsocket.c */; };
+		39987A1A1D227D0B000331C6 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39987A151D227D0B000331C6 /* ytcpsocket.swift */; };
+		39987A1B1D227D0B000331C6 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 39987A161D227D0B000331C6 /* yudpsocket.c */; };
+		39987A1C1D227D0B000331C6 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39987A171D227D0B000331C6 /* yudpsocket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		399879D51D226C57000331C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		399879D81D226C57000331C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		399879DA1D226C57000331C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39987A131D227D0B000331C6 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		39987A141D227D0B000331C6 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		39987A151D227D0B000331C6 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		39987A161D227D0B000331C6 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		39987A171D227D0B000331C6 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 		399879C91D226C57000331C6 /* SuperBrain */ = {
 			isa = PBXGroup;
 			children = (
+				39987A121D227D0B000331C6 /* ysocket */,
 				399879CA1D226C57000331C6 /* AppDelegate.swift */,
 				399879CC1D226C57000331C6 /* GameScene.sks */,
 				399879CE1D226C57000331C6 /* GameScene.swift */,
@@ -68,6 +79,18 @@
 				399879DA1D226C57000331C6 /* Info.plist */,
 			);
 			path = SuperBrain;
+			sourceTree = "<group>";
+		};
+		39987A121D227D0B000331C6 /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				39987A131D227D0B000331C6 /* ysocket.swift */,
+				39987A141D227D0B000331C6 /* ytcpsocket.c */,
+				39987A151D227D0B000331C6 /* ytcpsocket.swift */,
+				39987A161D227D0B000331C6 /* yudpsocket.c */,
+				39987A171D227D0B000331C6 /* yudpsocket.swift */,
+			);
+			path = ysocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +165,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39987A1A1D227D0B000331C6 /* ytcpsocket.swift in Sources */,
 				399879CF1D226C57000331C6 /* GameScene.swift in Sources */,
 				399879D11D226C57000331C6 /* GameViewController.swift in Sources */,
+				39987A181D227D0B000331C6 /* ysocket.swift in Sources */,
 				399879CB1D226C57000331C6 /* AppDelegate.swift in Sources */,
+				39987A191D227D0B000331C6 /* ytcpsocket.c in Sources */,
+				39987A1C1D227D0B000331C6 /* yudpsocket.swift in Sources */,
+				39987A1B1D227D0B000331C6 /* yudpsocket.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,10 @@ class GameScene: SKScene {
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         
         self.addChild(myLabel)
+        
+        // for test
+        let client = TCPClient(addr: "172.16.160.12", port: 7062)
+        client.connect(timeout: 5)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
