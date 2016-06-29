@@ -20,24 +20,25 @@ class GameScene: SKScene {
         
         let queue = dispatch_queue_create("connect", DISPATCH_QUEUE_SERIAL)
         dispatch_async(queue) {
-            let ip = "172.16.160.12"
-            // let ip = "192.168.1.108"
+            //let ip = "172.16.160.12"
+            let ip = "192.168.1.108"
             let client = TCPClient(addr: ip, port: 7062)
             let result = client.connect(timeout: 10)
             dispatch_async(dispatch_get_main_queue(), { 
                 if !result.0 {
                     myLabel.text = "Load failed!"
                 } else {
-//                    let playerInfo = "流星雨;123456";
-//                    let playerInfoData = playerInfo.dataUsingEncoding(NSUTF8StringEncoding)
-//                    client.send(data: [UInt8(1)])
-//                    let length = NSData(bytes: playerInfoData?.length, length: 2)
-//                    client.send(data: [UInt8((playerInfoData?.length)!)])
-//                    var data = NSMutableData();
-//                    var p = UnsafePointer<Void>();
- 
-                    //let friendListScene = FriendListScene(size: self.size)
-                    //self.view?.presentScene(friendListScene)
+                    let data = NSMutableData()
+                    let eventId = UnsafeMutablePointer<UInt8>.alloc(1)
+                    eventId.initialize(2)
+                    data.appendBytes(eventId, length: 1)
+                    let playerInfo = "流星雨;123456";
+                    let playerInfoData = playerInfo.dataUsingEncoding(NSUTF8StringEncoding)
+                    let bodyLength = UnsafeMutablePointer<UInt16>.alloc(1)
+                    bodyLength.initialize(UInt16((playerInfoData?.length)!))
+                    data.appendBytes(bodyLength, length: 2)
+                    data.appendData(playerInfoData!)
+                    client.send(data: data)
                 }
             })
         }
