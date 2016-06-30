@@ -20,8 +20,8 @@ class GameScene: SKScene {
         
         let queue = dispatch_queue_create("connect", DISPATCH_QUEUE_SERIAL)
         dispatch_async(queue) {
-            //let ip = "172.16.160.12"
-            let ip = "192.168.1.108"
+            let ip = "172.16.160.12"
+            //let ip = "192.168.1.108"
             let client = TCPClient(addr: ip, port: 7062)
             let result = client.connect(timeout: 10)
             dispatch_async(dispatch_get_main_queue(), { 
