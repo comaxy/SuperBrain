@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class LoadingScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
@@ -28,11 +28,14 @@ class GameScene: SKScene {
                 if !result.0 {
                     myLabel.text = "Load failed!"
                 } else {
+                    let userDefaults = NSUserDefaults.standardUserDefaults()
+                    let username = userDefaults.objectForKey("username") as! String
+                    let password = userDefaults.objectForKey("password") as! String
                     let data = NSMutableData()
                     let eventId = UnsafeMutablePointer<UInt8>.alloc(1)
                     eventId.initialize(SockEvent.REGISTER.rawValue)
                     data.appendBytes(eventId, length: 1)
-                    let playerInfo = "流星雨;123456";
+                    let playerInfo = username + ";" + password;
                     let playerInfoData = playerInfo.dataUsingEncoding(NSUTF8StringEncoding)
                     let bodyLength = UnsafeMutablePointer<UInt16>.alloc(1)
                     bodyLength.initialize(UInt16((playerInfoData?.length)!))
