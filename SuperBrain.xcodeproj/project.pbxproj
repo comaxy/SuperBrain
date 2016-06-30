@@ -20,6 +20,7 @@
 		39987A1A1D227D0B000331C6 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39987A151D227D0B000331C6 /* ytcpsocket.swift */; };
 		39987A1B1D227D0B000331C6 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 39987A161D227D0B000331C6 /* yudpsocket.c */; };
 		39987A1C1D227D0B000331C6 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39987A171D227D0B000331C6 /* yudpsocket.swift */; };
+		39BAC22D1D25245C003ABF99 /* SockEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BAC22C1D25245C003ABF99 /* SockEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		39987A151D227D0B000331C6 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
 		39987A161D227D0B000331C6 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
 		39987A171D227D0B000331C6 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		39BAC22C1D25245C003ABF99 /* SockEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SockEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				399879D71D226C57000331C6 /* LaunchScreen.storyboard */,
 				399879DA1D226C57000331C6 /* Info.plist */,
 				0FC5BC051D22BE04007D10A3 /* FriendListScene.swift */,
+				39BAC22C1D25245C003ABF99 /* SockEvent.swift */,
 			);
 			path = SuperBrain;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39BAC22D1D25245C003ABF99 /* SockEvent.swift in Sources */,
 				39987A1A1D227D0B000331C6 /* ytcpsocket.swift in Sources */,
 				399879CF1D226C57000331C6 /* LoadingScene.swift in Sources */,
 				399879D11D226C57000331C6 /* GameViewController.swift in Sources */,

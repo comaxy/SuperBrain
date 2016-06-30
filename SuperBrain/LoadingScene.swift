@@ -30,7 +30,7 @@ class GameScene: SKScene {
                 } else {
                     let data = NSMutableData()
                     let eventId = UnsafeMutablePointer<UInt8>.alloc(1)
-                    eventId.initialize(2)
+                    eventId.initialize(SockEvent.REGISTER.rawValue)
                     data.appendBytes(eventId, length: 1)
                     let playerInfo = "流星雨;123456";
                     let playerInfoData = playerInfo.dataUsingEncoding(NSUTF8StringEncoding)
