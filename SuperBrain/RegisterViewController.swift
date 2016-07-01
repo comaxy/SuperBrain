@@ -15,4 +15,8 @@ class RegisterViewController: UIViewController {
         // Do view setup here.
     }
     
+    @IBAction func playerNameTextField_DidEndOnExit(sender: UITextField) {
+    }
+    @IBAction func passwordTextField_DidEndOnExit(sender: UITextField) {
+    }
 }
