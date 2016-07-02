@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hRG-tP-YUu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hRG-tP-YUu">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -33,7 +33,7 @@
                         <viewControllerLayoutGuide type="top" id="zcq-9E-kSC"/>
                         <viewControllerLayoutGuide type="bottom" id="Ytf-ez-8VZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AFg-uT-olF">
+                    <view key="view" contentMode="scaleToFill" id="AFg-uT-olF" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -72,7 +72,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="pT8-H0-qpN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="passwordTextField_DidEndOnExit:" destination="nUe-1I-bZV" eventType="editingDidEndOnExit" id="TLU-tC-yg6"/>
                                 </connections>
@@ -101,13 +101,19 @@
                                     <constraint firstAttribute="height" constant="40" id="1p3-8y-c7t"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="zCQ-sp-txt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="passwordAgainTextField_DidEndOnExit:" destination="nUe-1I-bZV" eventType="editingDidEndOnExit" id="GrZ-cg-F3e"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGn-LB-LYn">
                                 <rect key="frame" x="260" y="488" width="80" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="注册"/>
+                                <connections>
+                                    <action selector="registerButton_TouchUpInside:" destination="nUe-1I-bZV" eventType="touchUpInside" id="DyG-aq-eIh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -134,7 +140,15 @@
                             <constraint firstItem="iXx-M7-2v7" firstAttribute="top" secondItem="Mfc-q5-G8a" secondAttribute="bottom" constant="30" id="tWa-fL-69H"/>
                             <constraint firstItem="KmQ-Xk-ORJ" firstAttribute="top" secondItem="feN-fK-dGZ" secondAttribute="bottom" constant="30" id="woP-v0-cG3"/>
                         </constraints>
+                        <connections>
+                            <action selector="view_TouchDown:" destination="nUe-1I-bZV" eventType="touchDown" id="4Gd-vG-nc1"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="passwordAgainTextField" destination="MYv-p5-nqg" id="Slh-Zh-2EC"/>
+                        <outlet property="passwordTextField" destination="iXx-M7-2v7" id="ERa-FI-W3t"/>
+                        <outlet property="playerNameTextField" destination="Mfc-q5-G8a" id="WYt-fV-L1j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MzV-jT-vWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
