@@ -19,16 +19,10 @@ class GameViewController: UIViewController {
         skView.presentScene(scene)
         
         scene.label.text = "正在连接服务器..."
-        let queue = dispatch_queue_create("socket_queue", DISPATCH_QUEUE_SERIAL)
-        
-        dispatch_async(queue) {
+        dispatch_async(SocketMgr.sharedSocketMgr.socket_queue) {
             
             // connect to server
-            let ip = "172.16.160.12"
-            //let ip = "192.168.1.108"
-            let client = TCPClient(addr: ip, port: 7062)
-            let result = client.connect(timeout: 10)
-
+            let result = SocketMgr.sharedSocketMgr.client.connect(timeout: 10)
             if !result.0 {
                 dispatch_sync(dispatch_get_main_queue(), {
                     scene.label.text = "连接服务器失败，请稍后再试！"
@@ -44,7 +38,7 @@ class GameViewController: UIViewController {
                 })
                 let data = NSMutableData()
                 let eventId = UnsafeMutablePointer<UInt8>.alloc(1)
-                eventId.initialize(SockEvent.REGISTER.rawValue)
+                eventId.initialize(SockEvent.LOGIN.rawValue)
                 data.appendBytes(eventId, length: 1)
                 let playerInfo = (username as! String) + ";" + (userDefaults.objectForKey("password") as! String);
                 let playerInfoData = playerInfo.dataUsingEncoding(NSUTF8StringEncoding)
@@ -52,11 +46,13 @@ class GameViewController: UIViewController {
                 bodyLength.initialize(UInt16((playerInfoData?.length)!))
                 data.appendBytes(bodyLength, length: 2)
                 data.appendData(playerInfoData!)
-                client.send(data: data)
+                SocketMgr.sharedSocketMgr.client.send(data: data)
             } else {
-                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let registerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("registerViewController")
-                self.presentViewController(registerViewController, animated: false, completion: nil)
+                dispatch_async(dispatch_get_main_queue(), {
+                    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let registerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("registerViewController")
+                    self.presentViewController(registerViewController, animated: false, completion: nil)
+                })
             }
         }
     }

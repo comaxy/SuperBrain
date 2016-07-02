@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F6390561D25604B007D4AEC /* RegisterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6390551D25604B007D4AEC /* RegisterScene.swift */; };
 		0F6390581D2562ED007D4AEC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6390571D2562ED007D4AEC /* RegisterViewController.swift */; };
+		0F6390EE1D27FCC5007D4AEC /* SocketMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6390ED1D27FCC5007D4AEC /* SocketMgr.swift */; };
 		0FC5BC061D22BE04007D10A3 /* FriendListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5BC051D22BE04007D10A3 /* FriendListScene.swift */; };
 		399879CB1D226C57000331C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399879CA1D226C57000331C6 /* AppDelegate.swift */; };
 		399879CD1D226C57000331C6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 399879CC1D226C57000331C6 /* GameScene.sks */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		0F6390551D25604B007D4AEC /* RegisterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterScene.swift; sourceTree = "<group>"; };
 		0F6390571D2562ED007D4AEC /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0F6390ED1D27FCC5007D4AEC /* SocketMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketMgr.swift; sourceTree = "<group>"; };
 		0FC5BC051D22BE04007D10A3 /* FriendListScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListScene.swift; sourceTree = "<group>"; };
 		399879C71D226C57000331C6 /* SuperBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		399879CA1D226C57000331C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				39BAC22C1D25245C003ABF99 /* SockEvent.swift */,
 				0F6390551D25604B007D4AEC /* RegisterScene.swift */,
 				0F6390571D2562ED007D4AEC /* RegisterViewController.swift */,
+				0F6390ED1D27FCC5007D4AEC /* SocketMgr.swift */,
 			);
 			path = SuperBrain;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 				TargetAttributes = {
 					399879C61D226C57000331C6 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = J2WFJ83T65;
 					};
 				};
 			};
@@ -178,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F6390561D25604B007D4AEC /* RegisterScene.swift in Sources */,
+				0F6390EE1D27FCC5007D4AEC /* SocketMgr.swift in Sources */,
 				39BAC22D1D25245C003ABF99 /* SockEvent.swift in Sources */,
 				39987A1A1D227D0B000331C6 /* ytcpsocket.swift in Sources */,
 				0F6390581D2562ED007D4AEC /* RegisterViewController.swift in Sources */,
@@ -301,10 +306,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xinyang Liu (L4RF8CV65T)";
 				INFOPLIST_FILE = SuperBrain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cynhard.SuperBrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c4354e93-6a1a-4389-b5d0-d9e2482d9bce";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -312,10 +320,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xinyang Liu (L4RF8CV65T)";
 				INFOPLIST_FILE = SuperBrain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cynhard.SuperBrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c4354e93-6a1a-4389-b5d0-d9e2482d9bce";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
