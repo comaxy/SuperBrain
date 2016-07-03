@@ -8,11 +8,11 @@
 
 import SpriteKit
 
-class FriendListScene: SKScene {
+class PlayerListScene: SKScene {
     override func didMoveToView(view: SKView) {
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Load Succeeded"
-        myLabel.fontSize = 45
+        myLabel.text = "正在加载在线玩家列表..."
+        myLabel.fontSize = 20
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         
         self.addChild(myLabel)

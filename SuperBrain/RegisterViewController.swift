@@ -7,6 +7,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordAgainTextField: UITextField!
     var indicatorView: UIActivityIndicatorView!
     var indicatorLabel: UILabel!
+    var playerName: String!
+    var password: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,10 +68,10 @@ class RegisterViewController: UIViewController {
             return
         }
         
-        self.view.endEditing(true)
+        self.playerName = playerName
+        self.password = password
         
-        self.indicatorView.startAnimating()
-        self.indicatorLabel.hidden = false
+        self.view.endEditing(true)
         
         dispatch_async(SocketMgr.sharedSocketMgr.socket_queue) {
             self.sendRegisterData_async(playerName, password: password)
@@ -84,6 +86,10 @@ class RegisterViewController: UIViewController {
     }
     
     func sendRegisterData_async(playerName: String, password: String) {
+        dispatch_sync(dispatch_get_main_queue()) { 
+            self.indicatorView.startAnimating()
+            self.indicatorLabel.hidden = false
+        }
         let data = NSMutableData()
         let eventId = UnsafeMutablePointer<UInt8>.alloc(1)
         eventId.initialize(SockEvent.REGISTER.rawValue)
@@ -107,6 +113,29 @@ class RegisterViewController: UIViewController {
         recvData = SocketMgr.sharedSocketMgr.client.read(Int(length))!
         let bodyUtf8 = NSData(bytes: recvData, length: Int(length))
         let body = NSString(data: bodyUtf8, encoding: NSUTF8StringEncoding) as! String
-        print(eventId, body)
+        if eventId == SockEvent.REG_RESULT.rawValue {
+            dispatch_sync(dispatch_get_main_queue()) {
+                self.indicatorView.stopAnimating()
+                self.indicatorLabel.hidden = true
+            }
+            let resultInfo = body.componentsSeparatedByString(";")
+            if resultInfo[0] == "1" {
+                let userDefaults = NSUserDefaults.standardUserDefaults()
+                userDefaults.setValue(self.playerName, forKey: "playerName")
+                userDefaults.setValue(self.password, forKey: "password")
+                dispatch_async(dispatch_get_main_queue(), {
+                    let alert = UIAlertController(title: "提示", message: "注册成功！", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "进入游戏", style: .Default, handler: { (UIAlertAction) in
+                        self.dismissViewControllerAnimated(false, completion: nil)
+                        GameMgr.sharedGameMgr.goToPlayerListScene()
+                    }))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                })
+            } else {
+                dispatch_async(dispatch_get_main_queue(), { 
+                    self.alertMessage("注册失败！\(resultInfo[1])")
+                })
+            }
+        }
     }
 }

@@ -13,8 +13,11 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let skView = self.view as! SKView
+        
+        GameMgr.sharedGameMgr.gameView = skView
+        
         let scene = LoadingScene(size: skView.bounds.size)
         skView.presentScene(scene)
         
@@ -30,9 +33,13 @@ class GameViewController: UIViewController {
                 return;
             }
             
+            dispatch_sync(dispatch_get_main_queue(), {
+                scene.label.text = "连接成功！"
+            })
+            
             let userDefaults = NSUserDefaults.standardUserDefaults()
-            let username = userDefaults.objectForKey("username")
-            if username != nil {
+            let playerName = userDefaults.objectForKey("playerName")
+            if playerName != nil {
                 dispatch_sync(dispatch_get_main_queue(), { 
                     scene.label.text = "正在登录..."
                 })
@@ -40,7 +47,7 @@ class GameViewController: UIViewController {
                 let eventId = UnsafeMutablePointer<UInt8>.alloc(1)
                 eventId.initialize(SockEvent.LOGIN.rawValue)
                 data.appendBytes(eventId, length: 1)
-                let playerInfo = (username as! String) + ";" + (userDefaults.objectForKey("password") as! String);
+                let playerInfo = (playerName as! String) + ";" + (userDefaults.objectForKey("password") as! String);
                 let playerInfoData = playerInfo.dataUsingEncoding(NSUTF8StringEncoding)
                 let bodyLength = UnsafeMutablePointer<UInt16>.alloc(1)
                 bodyLength.initialize(UInt16((playerInfoData?.length)!))
