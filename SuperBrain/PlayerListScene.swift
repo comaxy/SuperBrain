@@ -16,5 +16,7 @@ class PlayerListScene: SKScene {
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         
         self.addChild(myLabel)
+        
+        
     }
 }
