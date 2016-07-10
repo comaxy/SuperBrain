@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F6390561D25604B007D4AEC /* RegisterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6390551D25604B007D4AEC /* RegisterScene.swift */; };
 		0F6390581D2562ED007D4AEC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6390571D2562ED007D4AEC /* RegisterViewController.swift */; };
 		0F6390EE1D27FCC5007D4AEC /* SocketMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6390ED1D27FCC5007D4AEC /* SocketMgr.swift */; };
 		0F6390F01D28F2D7007D4AEC /* GameMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6390EF1D28F2D7007D4AEC /* GameMgr.swift */; };
-		0FC5BC061D22BE04007D10A3 /* PlayerListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC5BC051D22BE04007D10A3 /* PlayerListScene.swift */; };
 		0FF3B7091D30894100AF9B2F /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF3B7081D30894100AF9B2F /* PlayerListViewController.swift */; };
 		0FF3B70B1D313E2F00AF9B2F /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF3B70A1D313E2F00AF9B2F /* GameListViewController.swift */; };
 		399879CB1D226C57000331C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399879CA1D226C57000331C6 /* AppDelegate.swift */; };
@@ -30,11 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F6390551D25604B007D4AEC /* RegisterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterScene.swift; sourceTree = "<group>"; };
 		0F6390571D2562ED007D4AEC /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		0F6390ED1D27FCC5007D4AEC /* SocketMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketMgr.swift; sourceTree = "<group>"; };
 		0F6390EF1D28F2D7007D4AEC /* GameMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMgr.swift; sourceTree = "<group>"; };
-		0FC5BC051D22BE04007D10A3 /* PlayerListScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListScene.swift; sourceTree = "<group>"; };
 		0FF3B7081D30894100AF9B2F /* PlayerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
 		0FF3B70A1D313E2F00AF9B2F /* GameListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
 		399879C71D226C57000331C6 /* SuperBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,9 +90,7 @@
 				399879D51D226C57000331C6 /* Assets.xcassets */,
 				399879D71D226C57000331C6 /* LaunchScreen.storyboard */,
 				399879DA1D226C57000331C6 /* Info.plist */,
-				0FC5BC051D22BE04007D10A3 /* PlayerListScene.swift */,
 				39BAC22C1D25245C003ABF99 /* SockEvent.swift */,
-				0F6390551D25604B007D4AEC /* RegisterScene.swift */,
 				0F6390571D2562ED007D4AEC /* RegisterViewController.swift */,
 				0F6390ED1D27FCC5007D4AEC /* SocketMgr.swift */,
 				0F6390EF1D28F2D7007D4AEC /* GameMgr.swift */,
@@ -190,7 +184,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F6390561D25604B007D4AEC /* RegisterScene.swift in Sources */,
 				0F6390EE1D27FCC5007D4AEC /* SocketMgr.swift in Sources */,
 				39BAC22D1D25245C003ABF99 /* SockEvent.swift in Sources */,
 				39987A1A1D227D0B000331C6 /* ytcpsocket.swift in Sources */,
@@ -200,7 +193,6 @@
 				0FF3B7091D30894100AF9B2F /* PlayerListViewController.swift in Sources */,
 				39987A181D227D0B000331C6 /* ysocket.swift in Sources */,
 				399879CB1D226C57000331C6 /* AppDelegate.swift in Sources */,
-				0FC5BC061D22BE04007D10A3 /* PlayerListScene.swift in Sources */,
 				39987A191D227D0B000331C6 /* ytcpsocket.c in Sources */,
 				0FF3B70B1D313E2F00AF9B2F /* GameListViewController.swift in Sources */,
 				39987A1C1D227D0B000331C6 /* yudpsocket.swift in Sources */,
