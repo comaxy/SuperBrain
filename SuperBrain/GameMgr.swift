@@ -7,6 +7,7 @@ class GameMgr: SocketMgrDelegate {
     var registerViewController: RegisterViewController?
     var gameViewController: GameViewController?
     var playerListViewController: PlayerListViewController?
+    var gameListViewController: GameListViewController?
     
     init() {
         SocketMgr.sharedSocketMgr.socketMgrDelegate = self
@@ -73,18 +74,6 @@ class GameMgr: SocketMgrDelegate {
     }
     
     func handleChallengeFriendResponse(data: [UInt8]?) {
-        if data == nil {
-            return
-        }
-        let bodyUtf8 = NSData(bytes: data!, length: data!.count)
-        let body = NSString(data: bodyUtf8, encoding: NSUTF8StringEncoding) as! String
-        let response = body.componentsSeparatedByString(";")
-        switch response[0] {
-        case "1": print("friend agree")
-        case "2": print("friend disagree")
-        case "3": print("server internal error")
-        default:
-            break;
-        }
+        self.gameListViewController?.handleChallengeResponse(data)
     }
 }
