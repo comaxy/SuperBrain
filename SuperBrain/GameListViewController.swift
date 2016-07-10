@@ -1,11 +1,3 @@
-//
-//  GameListViewController.swift
-//  SuperBrain
-//
-//  Created by Theresa on 16/7/9.
-//  Copyright © 2016年 cynhard. All rights reserved.
-//
-
 import UIKit
 
 class GameListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -13,6 +5,7 @@ class GameListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     var gameList: [String] = []
+    var friendPlayerName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,5 +39,11 @@ class GameListViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func returnButton_TouchUpInside(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func selectButton_TouchUpInside(sender: UIButton) {
+        let gameNameLabel = sender.superview?.superview?.viewWithTag(1) as! UILabel
+        let gameName = gameNameLabel.text
+        SocketMgr.sharedSocketMgr.challengeFriend(self.friendPlayerName!, gameName: gameName!)
     }
 }

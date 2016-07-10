@@ -1,15 +1,7 @@
-//
-//  PlayerListViewController.swift
-//  SuperBrain
-//
-//  Created by Theresa on 16/7/9.
-//  Copyright © 2016年 cynhard. All rights reserved.
-//
-
 import UIKit
 
-//class PlayerListViewController: UITableViewController {
 class PlayerListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var tableView: UITableView!
     
     var playerList: [String]?
@@ -60,6 +52,15 @@ class PlayerListViewController: UIViewController, UITableViewDelegate, UITableVi
             return self.playerList!.count
         } else {
             return 0
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goToGameList" {
+            let gameListViewController = segue.destinationViewController as! GameListViewController
+            let gameCell = (sender as! UIView).superview!.superview!
+            let friendPlayerName = (gameCell.viewWithTag(1) as! UILabel).text!
+            gameListViewController.friendPlayerName = friendPlayerName
         }
     }
 }

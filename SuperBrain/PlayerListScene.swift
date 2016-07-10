@@ -1,11 +1,3 @@
-//
-//  FriendListScene.swift
-//  SuperBrain
-//
-//  Created by Theresa on 16/6/28.
-//  Copyright © 2016年 cynhard. All rights reserved.
-//
-
 import SpriteKit
 
 class PlayerListScene: SKScene {

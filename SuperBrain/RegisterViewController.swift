@@ -74,9 +74,7 @@ class RegisterViewController: UIViewController {
         
         self.view.endEditing(true)
         
-        dispatch_async(SocketMgr.sharedSocketMgr.socket_queue) {
-            self.sendRegisterData_async(playerName, password: password)
-        }
+        self.sendRegisterData(playerName, password: password)
     }
     
     func alertMessage(msg: String) {
@@ -85,11 +83,9 @@ class RegisterViewController: UIViewController {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    func sendRegisterData_async(playerName: String, password: String) {
-        dispatch_sync(dispatch_get_main_queue()) { 
-            self.indicatorView.startAnimating()
-            self.indicatorLabel.hidden = false
-        }
+    func sendRegisterData(playerName: String, password: String) {
+        self.indicatorView.startAnimating()
+        self.indicatorLabel.hidden = false
         SocketMgr.sharedSocketMgr.register(playerName, password: password)
     }
     

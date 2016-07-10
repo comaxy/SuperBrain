@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  SuperBrain
-//
-//  Created by thunisoft on 16/6/28.
-//  Copyright © 2016年 cynhard. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -39,7 +31,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

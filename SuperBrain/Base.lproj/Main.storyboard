@@ -40,21 +40,21 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册新用户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5I-wp-OB2">
                                 <rect key="frame" x="200" y="80" width="200" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGc-HG-R8M">
-                                <rect key="frame" x="50" y="228" width="60" height="40"/>
+                                <rect key="frame" x="50" y="148" width="60" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="BtU-f6-oFK"/>
                                     <constraint firstAttribute="height" constant="40" id="iC0-cq-Qs3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mfc-q5-G8a">
-                                <rect key="frame" x="140" y="228" width="410" height="40"/>
+                                <rect key="frame" x="140" y="148" width="410" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="p8d-wa-S2y"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="yaj-Nj-OSA"/>
@@ -66,7 +66,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXx-M7-2v7">
-                                <rect key="frame" x="140" y="298" width="410" height="40"/>
+                                <rect key="frame" x="140" y="218" width="410" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="pM0-oy-JD9"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="pT8-H0-qpN"/>
@@ -78,25 +78,25 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feN-fK-dGZ">
-                                <rect key="frame" x="50" y="298" width="60" height="40"/>
+                                <rect key="frame" x="50" y="218" width="60" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="c23-n8-wK7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="确认" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmQ-Xk-ORJ">
-                                <rect key="frame" x="50" y="368" width="60" height="40"/>
+                                <rect key="frame" x="50" y="288" width="60" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3XS-gb-jOm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MYv-p5-nqg">
-                                <rect key="frame" x="140" y="368" width="410" height="40"/>
+                                <rect key="frame" x="140" y="288" width="410" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="1p3-8y-c7t"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="zCQ-sp-txt"/>
@@ -108,7 +108,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGn-LB-LYn">
-                                <rect key="frame" x="260" y="488" width="80" height="60"/>
+                                <rect key="frame" x="260" y="348" width="80" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="注册"/>
                                 <connections>
@@ -125,13 +125,13 @@
                             <constraint firstItem="W5I-wp-OB2" firstAttribute="centerX" secondItem="AFg-uT-olF" secondAttribute="centerX" id="96o-tG-6Gr"/>
                             <constraint firstItem="MYv-p5-nqg" firstAttribute="leading" secondItem="KmQ-Xk-ORJ" secondAttribute="trailing" constant="30" id="E9m-a7-So8"/>
                             <constraint firstItem="UGc-HG-R8M" firstAttribute="leading" secondItem="AFg-uT-olF" secondAttribute="leadingMargin" constant="30" id="SUi-fX-5yE"/>
-                            <constraint firstItem="Mfc-q5-G8a" firstAttribute="top" secondItem="W5I-wp-OB2" secondAttribute="bottom" constant="100" id="Y1N-CT-6HO"/>
+                            <constraint firstItem="Mfc-q5-G8a" firstAttribute="top" secondItem="W5I-wp-OB2" secondAttribute="bottom" constant="20" id="Y1N-CT-6HO"/>
                             <constraint firstItem="KmQ-Xk-ORJ" firstAttribute="width" secondItem="UGc-HG-R8M" secondAttribute="width" id="Zwf-Yd-MKe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iXx-M7-2v7" secondAttribute="trailing" constant="30" id="bWl-No-pKq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MYv-p5-nqg" secondAttribute="trailing" constant="30" id="eQv-hs-MXi"/>
-                            <constraint firstItem="UGc-HG-R8M" firstAttribute="top" secondItem="zcq-9E-kSC" secondAttribute="bottom" constant="208" id="kRd-Bc-wOj"/>
+                            <constraint firstItem="UGc-HG-R8M" firstAttribute="top" secondItem="zcq-9E-kSC" secondAttribute="bottom" constant="128" id="kRd-Bc-wOj"/>
                             <constraint firstItem="feN-fK-dGZ" firstAttribute="width" secondItem="UGc-HG-R8M" secondAttribute="width" id="kkx-eM-QRl"/>
-                            <constraint firstItem="HGn-LB-LYn" firstAttribute="top" secondItem="MYv-p5-nqg" secondAttribute="bottom" constant="80" id="lHl-t3-QRd"/>
+                            <constraint firstItem="HGn-LB-LYn" firstAttribute="top" secondItem="MYv-p5-nqg" secondAttribute="bottom" constant="20" id="lHl-t3-QRd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mfc-q5-G8a" secondAttribute="trailing" constant="30" id="oKB-AD-6pK"/>
                             <constraint firstItem="feN-fK-dGZ" firstAttribute="top" secondItem="UGc-HG-R8M" secondAttribute="bottom" constant="30" id="p59-d8-xhH"/>
                             <constraint firstItem="W5I-wp-OB2" firstAttribute="top" secondItem="zcq-9E-kSC" secondAttribute="bottom" constant="60" id="qnI-Dw-cKd"/>
@@ -172,7 +172,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="玩家列表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAP-NJ-Pe4">
                                         <rect key="frame" x="250" y="14.5" width="100" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfX-Ys-MaJ">
@@ -207,7 +207,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubk-3f-VHl">
                                                     <rect key="frame" x="38" y="9" width="52.5" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyO-cL-4QQ">
@@ -215,7 +215,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="挑战"/>
                                                     <connections>
-                                                        <segue destination="tmr-cO-hRV" kind="showDetail" id="XA2-i6-LO8"/>
+                                                        <segue destination="tmr-cO-hRV" kind="showDetail" identifier="goToGameList" id="XA2-i6-LO8"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -275,7 +275,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="游戏列表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01c-Ui-N2J">
                                         <rect key="frame" x="250" y="14.5" width="100" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueE-H8-o7k">
@@ -309,13 +309,16 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99J-4V-Vsz">
                                                     <rect key="frame" x="38" y="9.5" width="52.5" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkH-hV-g7u">
                                                     <rect key="frame" x="522" y="4" width="40" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="选择"/>
+                                                    <connections>
+                                                        <action selector="selectButton_TouchUpInside:" destination="tmr-cO-hRV" eventType="touchUpInside" id="TSy-Ck-xH0"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
